@@ -1,0 +1,36 @@
+.wp-block-columns {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+}
+
+.wp-block-column {
+    flex: 1;
+
+    @media (max-width: 640px) {
+        flex-basis: 100% !important;
+    }
+}
+
+.wp-block-embed-youtube {
+    iframe {
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.wp-block-embed__wrapper {
+    position: relative;
+}

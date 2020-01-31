@@ -1,0 +1,24 @@
+<svg width="282" height="147" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_3_blur">
+   <feGaussianBlur stdDeviation="0.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_4_blur">
+   <feGaussianBlur stdDeviation="1.9" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="149" width="284" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text stroke="#000" transform="matrix(29.519298553466797,0,0,3.9547834396362305,-2695.0737133026123,-530.475964397192) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="171.453125" x="94.5" stroke-width="0" fill="#d1bb95"/>
+  <text opacity="0.86" filter="url(#svg_3_blur)" stroke="#000" transform="matrix(4.435387984771401,0,0,5.470914300381593,-497.2910356877625,-526.5712911163961) " font-style="italic" xml:space="preserve" text-anchor="start" font-family="Georgia, Times, 'Times New Roman', serif" font-size="11" id="svg_3" y="109.024771" x="117.493817" stroke-opacity="null" stroke-width="0" fill="#d1bb95">React.Dev</text>
+  <ellipse stroke="#000" opacity="0.73" filter="url(#svg_4_blur)" ry="13.499999" rx="132.499997" id="svg_4" cy="108.953124" cx="142.000003" stroke-opacity="null" stroke-width="0" fill="#d1bb95"/>
+ </g>
+</svg>
