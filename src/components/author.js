@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Short from './includes/short'
 import Paginator from './includes/pagination'
-import { CardColumns } from 'reactstrap'
+import Sidebar from './layout/sidebar'
 
 export default class Author extends Component {
   constructor(props) {
@@ -86,20 +86,29 @@ export default class Author extends Component {
       process.env.REACT_APP_TITLE + ': articles by ' + this.state.name
     return (
       <div className="container px-0">
-        <h1> {this.state.name} </h1>{' '}
+        <h1> {this.state.name} </h1>
         <div className="d-flex">
-          <img src={this.state.avatar} alt="{this.state.name}" className="mr-2 avatar" />
-          <p className="lead"> {this.state.descr} </p>{' '}
-        </div>{' '}
-        <hr />
-        <CardColumns> {posts} </CardColumns>{' '}
-        {this.state.total_pages > 1 && (
-          <Paginator
-            page={this.state.page}
-            total_pages={this.state.total_pages}
-            slug={'author/' + this.state.slug}
+          <img
+            src={this.state.avatar}
+            alt="{this.state.name}"
+            className="mr-2 avatar"
           />
-        )}{' '}
+          <p className="lead"> {this.state.descr} </p>
+        </div>
+        <hr />
+        <div className="row ">
+          <div className="col-12 col-lg-8">
+            <div className="row"> {posts}</div>
+            {this.state.total_pages > 1 && (
+              <Paginator
+                page={this.state.page}
+                total_pages={this.state.total_pages}
+                slug={'author/' + this.state.slug}
+              />
+            )}
+          </div>
+          <div className="col-12 col-lg-4">{<Sidebar />}</div>
+        </div>
       </div>
     )
   }
