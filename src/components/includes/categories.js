@@ -6,7 +6,7 @@ export default class Categories extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      catLinks: [],
+      categoryLinks: [],
     }
   }
 
@@ -15,28 +15,28 @@ export default class Categories extends Component {
   }
   shouldComponentUpdate(nextProps) {
     if (this.props.cat !== nextProps.cat) {
-      let catlink = ''
+      let catlinks = []
       nextProps.cat.map(id => {
         axios
           .get(`${process.env.REACT_APP_API_BASE_URL}/wp/v2/categories/${id}`)
           .then(response => {
-            catlink = (
+            catlinks.push(
               <NavLink
                 key={id}
                 className="mr-2"
                 to={`/category/${response.data.slug}`}
               >
-                {response.data.name}{' '}
+                {response.data.name}
               </NavLink>
             )
             if (this.mounted) {
-              this.state.catLinks.push(catlink)
+              this.setState({ categoryLinks: catlinks })
             }
           })
           .catch(error => {
             console.log(error)
           })
-        return catlink
+        return catlinks
       })
     }
     return true
@@ -46,7 +46,7 @@ export default class Categories extends Component {
     this.mounted = false
   }
   renderCategories() {
-    let links = this.state.catLinks.map(link => {
+    let links = this.state.categoryLinks.map(link => {
       return link
     })
 
